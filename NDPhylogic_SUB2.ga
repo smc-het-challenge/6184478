@@ -1,0 +1,237 @@
+{
+    "a_galaxy_workflow": "true", 
+    "format-version": "0.1", 
+    "name": "NDPhylogic_SUB2", 
+    "steps": {
+        "1": {
+            "tool_id": null, 
+            "content_id": null, 
+            "uuid": "456e5459-fc8d-4d47-96ee-1f8d9ef52b2b", 
+            "tool_version": null, 
+            "outputs": [], 
+            "workflow_outputs": [
+                {
+                    "output_name": "output", 
+                    "uuid": "86783a8d-76c2-44d5-8288-e09190953631", 
+                    "label": null
+                }
+            ], 
+            "annotation": "CNA_INPUT", 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "CNA_INPUT", 
+                    "name": "CNA_INPUT"
+                }
+            ], 
+            "tool_errors": null, 
+            "position": {
+                "top": 300, 
+                "left": 415
+            }, 
+            "tool_state": "{\"name\": \"CNA_INPUT\"}", 
+            "label": null, 
+            "type": "data_input", 
+            "id": 1, 
+            "name": "Input dataset"
+        }, 
+        "0": {
+            "tool_id": null, 
+            "content_id": null, 
+            "uuid": "4f29f12a-7c6d-47dc-abdd-6103bff5825a", 
+            "tool_version": null, 
+            "outputs": [], 
+            "workflow_outputs": [
+                {
+                    "output_name": "output", 
+                    "uuid": "c26a847d-f3dc-4ac2-a9b6-9b9ace54908c", 
+                    "label": null
+                }
+            ], 
+            "annotation": "VCF_INPUT", 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "VCF_INPUT", 
+                    "name": "VCF_INPUT"
+                }
+            ], 
+            "tool_errors": null, 
+            "position": {
+                "top": 206, 
+                "left": 403
+            }, 
+            "tool_state": "{\"name\": \"VCF_INPUT\"}", 
+            "label": null, 
+            "type": "data_input", 
+            "id": 0, 
+            "name": "Input dataset"
+        }, 
+        "3": {
+            "tool_id": "NDPhylogic2", 
+            "content_id": "NDPhylogic2", 
+            "uuid": "fefeb3f5-b3f5-4618-9000-50e459b0def2", 
+            "tool_version": "1.1.0", 
+            "outputs": [
+                {
+                    "type": "txt", 
+                    "name": "2A"
+                }, 
+                {
+                    "type": "txt", 
+                    "name": "1C"
+                }, 
+                {
+                    "type": "txt", 
+                    "name": "1B"
+                }, 
+                {
+                    "type": "txt", 
+                    "name": "2B"
+                }, 
+                {
+                    "type": "txt", 
+                    "name": "logfile"
+                }
+            ], 
+            "post_job_actions": {
+                "HideDatasetAction1B": {
+                    "output_name": "1B", 
+                    "action_type": "HideDatasetAction", 
+                    "action_arguments": {}
+                }, 
+                "HideDatasetAction1C": {
+                    "output_name": "1C", 
+                    "action_type": "HideDatasetAction", 
+                    "action_arguments": {}
+                }, 
+                "HideDatasetAction2A": {
+                    "output_name": "2A", 
+                    "action_type": "HideDatasetAction", 
+                    "action_arguments": {}
+                }, 
+                "HideDatasetActionlogfile": {
+                    "output_name": "logfile", 
+                    "action_type": "HideDatasetAction", 
+                    "action_arguments": {}
+                }, 
+                "HideDatasetAction2B": {
+                    "output_name": "2B", 
+                    "action_type": "HideDatasetAction", 
+                    "action_arguments": {}
+                }
+            }, 
+            "workflow_outputs": [], 
+            "annotation": "", 
+            "input_connections": {
+                "VCF_FILE": {
+                    "output_name": "output", 
+                    "id": 0
+                }, 
+                "CELLULARITY_FILE": {
+                    "output_name": "output", 
+                    "id": 2
+                }, 
+                "CNA_FILE": {
+                    "output_name": "output", 
+                    "id": 1
+                }
+            }, 
+            "inputs": [], 
+            "tool_errors": null, 
+            "position": {
+                "top": 256.5, 
+                "left": 724
+            }, 
+            "tool_state": "{\"__page__\": 0, \"VCF_FILE\": \"null\", \"CELLULARITY_FILE\": \"null\", \"CNA_FILE\": \"null\", \"__rerun_remap_job_id__\": null}", 
+            "label": null, 
+            "type": "tool", 
+            "id": 3, 
+            "name": "NDPhylogic2"
+        }, 
+        "2": {
+            "tool_id": null, 
+            "content_id": null, 
+            "uuid": "915a2fd6-929d-472d-894a-99765e67c083", 
+            "tool_version": null, 
+            "outputs": [], 
+            "workflow_outputs": [
+                {
+                    "output_name": "output", 
+                    "uuid": "a0f58f19-24ec-4df8-9bb5-c1c21ac13453", 
+                    "label": null
+                }
+            ], 
+            "annotation": "CELLULARITY_INPUT", 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "CELLULARITY_INPUT", 
+                    "name": "CELLULARITY_INPUT"
+                }
+            ], 
+            "tool_errors": null, 
+            "position": {
+                "top": 388, 
+                "left": 418
+            }, 
+            "tool_state": "{\"name\": \"CELLULARITY_INPUT\"}", 
+            "label": null, 
+            "type": "data_input", 
+            "id": 2, 
+            "name": "Input dataset"
+        }, 
+        "4": {
+            "tool_id": "smc_het_eval", 
+            "content_id": "smc_het_eval", 
+            "uuid": "ea246201-1956-40fb-9de2-e35a71a00359", 
+            "tool_version": "0.1.0", 
+            "outputs": [
+                {
+                    "type": "txt", 
+                    "name": "outfile"
+                }
+            ], 
+            "post_job_actions": {}, 
+            "workflow_outputs": [
+                {
+                    "output_name": "outfile", 
+                    "uuid": "9a22bb8a-229a-41e4-95a0-712d6bd7ec12", 
+                    "label": null
+                }
+            ], 
+            "annotation": "", 
+            "input_connections": {
+                "proportion|predfile": {
+                    "output_name": "1C", 
+                    "id": 3
+                }, 
+                "cluster_assignment|predfile": {
+                    "output_name": "2A", 
+                    "id": 3
+                }, 
+                "cocluster_assignment|predfile": {
+                    "output_name": "2B", 
+                    "id": 3
+                }, 
+                "population|predfile": {
+                    "output_name": "1B", 
+                    "id": 3
+                }
+            }, 
+            "inputs": [], 
+            "tool_errors": null, 
+            "position": {
+                "top": 344, 
+                "left": 1114.5
+            }, 
+            "tool_state": "{\"cocluster_assignment\": \"{\\\"ancestor\\\": {\\\"submit\\\": \\\"no\\\", \\\"__current_case__\\\": 1}, \\\"predfile\\\": null, \\\"submit\\\": \\\"yes\\\", \\\"__current_case__\\\": 0}\", \"__page__\": 0, \"approx\": \"{\\\"enable\\\": \\\"no\\\", \\\"__current_case__\\\": 1}\", \"__rerun_remap_job_id__\": null, \"proportion\": \"{\\\"predfile\\\": null, \\\"submit\\\": \\\"yes\\\", \\\"__current_case__\\\": 0}\", \"sample\": \"\\\"/opt/galaxy/data/Tumour1/Tumour1\\\"\", \"cellularity\": \"{\\\"submit\\\": \\\"no\\\", \\\"__current_case__\\\": 1}\", \"cluster_assignment\": \"{\\\"predfile\\\": null, \\\"phylogeny\\\": {\\\"submit\\\": \\\"no\\\", \\\"__current_case__\\\": 1}, \\\"submit\\\": \\\"yes\\\", \\\"__current_case__\\\": 0}\", \"population\": \"{\\\"predfile\\\": null, \\\"submit\\\": \\\"yes\\\", \\\"__current_case__\\\": 0}\"}", 
+            "label": null, 
+            "type": "tool", 
+            "id": 4, 
+            "name": "SMC-Het Evaluator"
+        }
+    }, 
+    "annotation": "", 
+    "uuid": "58ec1eb2-2b0f-4aba-aa03-08aa1511f357"
+}

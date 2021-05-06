@@ -1,0 +1,28 @@
+<?xml version="1.0" ?><tool id="NDPhylogic2" name="NDPhylogic2" version="1.1.0">
+<description>A simple example</description>
+<requirements>
+<container type="docker">docker.synapse.org/syn2813581/6184478/dlivitzbroad/smchetsub2</container>
+</requirements>
+<command>
+/opt/wrap_clust.bash ${CELLULARITY_FILE} ${CNA_FILE} ${VCF_FILE}
+</command>
+
+<inputs>
+<param format="vcf" help="" label="VCF file" name="VCF_FILE" type="data"/>
+<param format="txt" help="" label="CNA file" name="CNA_FILE" type="data"/>
+<param format="txt" help="" label="TXT file" name="CELLULARITY_FILE" type="data"/>
+
+</inputs>
+
+<outputs>
+<data format="txt" from_work_dir="2A.txt" label="Output File 2A" name="2A"/>
+<data format="txt" from_work_dir="1C.txt" label="Output File 1C" name="1C"/>
+<data format="txt" from_work_dir="1B.txt" label="Output File 1B" name="1B"/>
+<data format="txt" from_work_dir="2B.txt" label="Output File 2B" name="2B"/>
+<data format="txt" from_work_dir="file.log" label="Log File" name="logfile"/>
+</outputs>
+
+<help>
+You should totally explain how to use your tool here
+</help>
+</tool>
